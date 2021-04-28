@@ -1,0 +1,36 @@
+.characters-list-container {
+	margin: 20px 130px;
+    min-height: 100vh;
+}
+
+.character-card-container {
+    padding: 5px;
+}
+
+.mat-card {
+    min-height: 284px;
+    max-height: 284px;
+}
+
+.character-card-container a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+img.character-image {
+    min-height: 244px;
+    max-height: 244px;
+}
+
+@media only screen and (max-width: 820px) {
+	img.character-image {
+        min-height: 344px;
+        max-height: 344px;
+    }
+
+    .mat-card {
+        min-height: 384px;
+        max-height: 384px;
+    }
+}

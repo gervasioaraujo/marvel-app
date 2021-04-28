@@ -1,0 +1,29 @@
+<div fxLayoutAlign="center center" class="content-container">
+
+    <mat-spinner *ngIf="!character" mode="indeterminate" matSuffix diameter="50"></mat-spinner>
+
+    <mat-card *ngIf="character" class="mat-card">
+
+        <img mat-card-image src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+            alt="{{ character.name }}" class="character-image">
+
+        <mat-card-title>
+            {{ character.name }}
+        </mat-card-title>
+        <mat-card-content class="character-content">
+            <p>
+                {{ character.description }}
+            </p>
+            <label>Comics:</label>
+            <ul>
+                <li *ngFor="let comic of character.comics">{{ comic }}</li>
+            </ul>
+            <label>Series:</label>
+            <ul>
+                <li *ngFor="let serie of character.series">{{ serie }}</li>
+            </ul>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>

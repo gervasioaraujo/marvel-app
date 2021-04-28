@@ -1,0 +1,21 @@
+.mat-card {
+    margin-bottom: 20px;
+}
+
+.character-image {
+    min-height: 320px;
+    /* max-width: 420px; */
+    margin-right: 12px;
+}
+
+.character-content {
+    margin-top: 25px;
+}
+
+.character-content p {
+    margin-bottom: 22px;
+}
+
+.character-content label {
+    font-weight: 700;
+}

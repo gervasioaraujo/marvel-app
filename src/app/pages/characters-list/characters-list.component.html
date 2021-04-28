@@ -1,0 +1,20 @@
+<div fxFlex fxLayout="column" fxLayoutAlign="center center" class="content-container">
+
+    <mat-spinner *ngIf="!charactersList" mode="indeterminate" matSuffix diameter="50"></mat-spinner>
+
+    <div *ngIf="charactersList" fxLayout="row wrap">
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"
+            *ngFor="let character of charactersList" class="character-card-container">
+            <mat-card class="mat-card">
+                <a routerLink="/character-details/{{ character.id }}">
+                    <img mat-card-image src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}"
+                        alt="{{ character.name }}" class="character-image">
+                    <mat-card-title>
+                        {{ character.name }}
+                    </mat-card-title>
+                </a>
+            </mat-card>
+        </div>
+    </div>
+
+</div>
